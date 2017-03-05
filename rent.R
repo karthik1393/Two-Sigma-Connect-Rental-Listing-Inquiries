@@ -119,7 +119,7 @@ names(num_train)
 rent_svm<-svm(interest_level~bedrooms+bathrooms+price+latitude+longitude+feature_count+photos_count+description_count+manager_id,data=num_train,probability=TRUE)
 svm_pre<-predict(rent_svm,newdata=rent_num,probability=TRUE)
 pre<-attr(svm_pre,"probabilities")
-write.csv(pre,"pred1.csv")         ###loww score
+write.csv(pre,"pred1.csv")      
 
 
 
